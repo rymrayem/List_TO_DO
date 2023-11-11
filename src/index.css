@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-input: #edeef08c;
+  --color-red: #ff5945;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+.parent {
+  background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  border-radius: 10px;
+}
+
+form {
+  background-color: var(--bg-input);
+  border-radius: 30px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+form span {
+  position: absolute;
+  color: red;
+  bottom: -20px;
+  left: 35px;
+  font-size: 12px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  min-width: 30px;
+  background: fixed;
+  padding: 14px 0 14px 20px;
+  position: relative;
+}
+
+button {
+  border: none;
+  background: var(--color-red);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-out;
+}
+
+ul li:hover,
+ul li:focus,
+ul li:active {
+  background-color: var(--bg-input);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(/images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
