@@ -5,7 +5,7 @@
 ## Clone the repository
 
 ```bash
-git clone https://github.com/yuzakki/To-Do-List-App.git`
+git clone https://github.com/rymrayem/List_TO_DO.git'
 ```
 
 Navigate to the project directory:
